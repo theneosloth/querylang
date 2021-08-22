@@ -87,15 +87,15 @@ func (p *Parser) Parse() (*Group, error) {
 	}
 }
 
-// func (q *Query) String() string {
-// 	return fmt.Sprintf("[%s %s %s]", q.Operation, q.Subject, q.Query)
-// }
+func (q *Query) String() string {
+	return fmt.Sprintf("[%s %s %s]", q.Operation, q.Subject, q.Query)
+}
 
-// func (g *Group) String() string {
-// 	out := "{\n"
-// 	for _, q := range g.Queries {
-// 		out = fmt.Sprintf("%s\t%s\n", out, q.String())
-// 	}
-// 	out = fmt.Sprintf("%s\n}\n", out)
-// 	return out
-// }
+func (g *Group) String() string {
+	out := "{\n"
+	for _, q := range g.Queries {
+		out = fmt.Sprintf("%s\t%s\n", out, q.String())
+	}
+	out = fmt.Sprintf("%s\n}\n", out)
+	return out
+}
